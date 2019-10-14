@@ -122,8 +122,10 @@ for (let i = 0; i < carYears.length; i++) {
 // use JSON.stringify() to show the results of the array in the console.
 let BMWAndAudi = [];
 for (let i = 0; i < inventory.length; i++) {
-  if (inventory.car_make = "Audi") {
+  if (inventory[i].car_make === "Audi") {
     BMWAndAudi.push(inventory[i]);
-  } 
+  } else if (inventory[i].car_make === "BMW") {
+    BMWAndAudi.push(inventory[i]);
+  }
 }
-console.log(BMWAndAudi);
+console.log(JSON.stringify(BMWAndAudi));
